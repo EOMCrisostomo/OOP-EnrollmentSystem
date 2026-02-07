@@ -18,6 +18,7 @@ public class Main {
     c.setCourseID("0001");
     c.setCourseName("Integrative Programming");
     c.display();
+    // Testing
 
     }
 }
