@@ -6,18 +6,18 @@ public class Main {
     public static void main(String[] args) {
 // + public | - private | # protected | ~ package private
     Scanner scan = new Scanner(System.in);
-    Student s = new Student();
-    Course c = new Course();
+    Student student = new Student();
+    Course course = new Course();
 
-    s.setStudentID(1200014254);
-    s.setProgram("Information Technology");
-    s.setStudentName("Editha Crisostomo");
-    s.display();
+    student.setStudentID(1200014254);
+    student.setProgram("Information Technology");
+    student.setStudentName("Editha Crisostomo");
+    student.display();
 
-    c.setProgram("Information Technology");
-    c.setCourseID("0001");
-    c.setCourseName("Integrative Programming");
-    c.display();
+    course.setProgram("Information Technology");
+    course.setCourseID("0001");
+    course.setCourseName("Integrative Programming");
+    course.display();
 
     }
 }
