@@ -18,10 +18,6 @@ public class Main {
     course.setCourseID("0001");
     course.setCourseName("Integrative Programming");
     course.display();
-    course.setProgram("Information Technology");
-    course.setCourseID("0001");
-    course.setCourseName("Integrative Programming");
-    course.display();
     // Testing
 
     }
