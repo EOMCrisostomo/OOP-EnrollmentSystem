@@ -28,7 +28,7 @@ Image: ![output.png](src/main/resources/Images/output.png)
 for Output
 
 ---
-# TITLE
+# OOP Enrollment System
 ---
 **Author**
 
