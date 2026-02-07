@@ -32,6 +32,6 @@ for Output
 ---
 **Author**
 
-**1. Description**
+**1. This is a simple Enrollment System**
 
-!(ScreenShot)[]
+![output.png](src/main/resources/Images/output.png)
