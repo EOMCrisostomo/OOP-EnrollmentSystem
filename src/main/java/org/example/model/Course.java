@@ -1,14 +1,14 @@
-package org.example;
+package org.example.model;
 
 public class Course {
-    private String courseID;
+    private int courseID;
     private String courseName;
     private String program;
 
     public Course (){
 
     }
-    public Course (String courseName, String courseID, String program){
+    public Course (String courseName, int courseID, String program){
         this.courseName = courseName;
         this.courseID = courseID;
         this.program = program;
@@ -21,10 +21,10 @@ public class Course {
         this.courseName = courseName;
     }
     //    ID
-    public String getcourseID (){
+    public int getcourseID (){
         return courseID;
     }
-    public void setCourseID(String courseID){
+    public void setCourseID(int courseID){
         this.courseID = courseID;
     }
     //   Program
@@ -34,12 +34,12 @@ public class Course {
     public void setProgram (String program){
         this.program = program;
     }
-
-    public void display (){
-        System.out.println("-----------------Course Information-----------------");
-        System.out.printf("Program: %s \n", program);
-        System.out.printf("Course: %s \n", courseName);
-        System.out.printf("Course ID: %s \n", courseID);
-
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseID=" + courseID +
+                ", courseName='" + courseName + '\'' +
+                ", program='" + program + '\'' +
+                '}';
     }
 }
