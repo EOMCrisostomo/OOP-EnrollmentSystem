@@ -1,33 +1,17 @@
 package org.example.model;
 
-public class Student {
-    private int studentID;
-    private String studentName;
+public class Student extends Person{
     private String program;
 
-    public Student (){
-
+    public Student(){
+        super();
     }
-    public Student (String studentName, int studentID, String program){
-        this.studentName = studentName;
+    public Student (int id, String name, String program){
+        super(id, name);
         this.program = program;
-        this.studentID = studentID;
     }
-//    Name
-    public String getStudentName(){
-        return studentName;
-    }
-    public void setStudentName(String studentName){
-        this.studentName = studentName;
-    }
-//    ID
-    public int getStudentID(){
-        return studentID;
-    }
-    public void setStudentID(int studentID){
-        this.studentID = studentID;
-    }
-//   Program
+
+    //   Program
     public String getProgram (){
         return program;
     }
@@ -38,8 +22,8 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "studentID=" + studentID +
-                ", studentName='" + studentName + '\'' +
+                "studentID=" + getId() +
+                ", studentName='" + getName() + '\'' +
                 ", program='" + program + '\'' +
                 '}';
     }

@@ -11,30 +11,30 @@ public class StudentRegistration {
         System.out.print("Enter Program: ");
         String program = scan.next();
         System.out.print("Enter Student ID: ");
-        int ID = scan.nextInt();
+        int id = scan.nextInt();
         System.out.print("Enter Student Name: ");
         String name = scan.next();
-        studentArrayList.add(new Student(name, ID, program));
+        studentArrayList.add(new Student(id, name, program));
     }
     public void displayAll(){
         System.out.println(studentArrayList);
     }
 
-    public void updateStudent (int ID){
+    public void updateStudent (int id){
         for (int i = 0; i < studentArrayList.size(); i++){
-            if(studentArrayList.get(i).getStudentID() == (ID)){
+            if(studentArrayList.get(i).getId() == (id)){
                 System.out.print("Enter Program: ");
                 String program = scan.next();
                 System.out.print("Enter Student Name: ");
                 String name = scan.next();
-                studentArrayList.set(i, new Student(name, ID, program));
+                studentArrayList.set(i, new Student(id, name, program));
                 break;
             }
         }
     }
-    public String removeStudent (int ID){
+    public String removeStudent (int id){
         for (int i = 0; i < studentArrayList.size(); i++){
-            if(studentArrayList.get(i).getStudentID() == (ID)){
+            if(studentArrayList.get(i).getId() == (id)){
                 studentArrayList.remove(i);
                 return "Successfully Deleted";
             }

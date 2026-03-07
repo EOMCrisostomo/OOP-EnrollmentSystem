@@ -14,7 +14,7 @@ public class CourseRegistration {
         int ID = scan.nextInt();
         System.out.print("Enter Course Name: ");
         String name = scan.next();
-        courseArrayList.add(new Course(name, ID, program));
+        courseArrayList.add(new Course(ID, name, program));
 }
     public void displayAll(){
         System.out.println(courseArrayList);
@@ -22,19 +22,19 @@ public class CourseRegistration {
 
     public void updateCourse (int ID){
         for (int i = 0; i < courseArrayList.size(); i++){
-            if(courseArrayList.get(i).getcourseID() == (ID)){
+            if(courseArrayList.get(i).getId() == (ID)){
                 System.out.print("Enter Program: ");
                 String program = scan.next();
                 System.out.print("Enter Course Name: ");
                 String name = scan.next();
-                courseArrayList.set(i, new Course(name, ID, program));
+                courseArrayList.set(i, new Course(ID, name, program));
                 break;
             }
         }
     }
     public String removeCourse (int ID){
         for (int i = 0; i < courseArrayList.size(); i++){
-            if(courseArrayList.get(i).getcourseID() == (ID)){
+            if(courseArrayList.get(i).getId() == (ID)){
             courseArrayList.remove(i);
             return "Successfully Deleted";
             }
