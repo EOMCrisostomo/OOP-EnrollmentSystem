@@ -1,4 +1,6 @@
 package org.example;
+import org.example.model.Instructor;
+import org.example.model.Student;
 import org.example.service.CourseRegistration;
 import org.example.service.InstructorRegistration;
 import org.example.service.StudentRegistration;
@@ -12,6 +14,8 @@ public class Main {
         CourseRegistration cRegister = new CourseRegistration();
         StudentRegistration sRegister = new StudentRegistration();
         InstructorRegistration iRegister = new InstructorRegistration();
+        Student s = new Student();
+        Instructor i = new Instructor();
 
         while (true) {
         System.out.print("\n[1] = Course\n[2] = Student\n[3] = Instructor \n[4] = Exit\nChoice: ");
@@ -46,10 +50,11 @@ public class Main {
                     }
                     break;
                 }
+                break;
 
             case 2:
                 while(true) {
-                    System.out.print("\n[1] Save Student \n[2] Display Student \n[3] Update Student \n[4] Remove Student \n[5] Exit\nEnter Choice: ");
+                    System.out.print("\n[1] Save Student \n[2] Display Student \n[3] Update Student \n[4] Remove Student \n[5] Show Main task\n[6]Exit\nEnter Choice: ");
                     choice = scan.nextInt();
                     switch (choice) {
                         case 1:
@@ -69,10 +74,13 @@ public class Main {
                             sRegister.removeStudent(ID);
                             break;
                         case 5:
+                            s.mainTask();
+                        case 6:
                             break;
                     }
                     break;
                 }
+                break;
 
             case 3:
                 while(true) {
@@ -96,10 +104,13 @@ public class Main {
                             iRegister.removeInstructor(ID);
                             break;
                         case 5:
+                            i.mainTask();
+                        case 6:
                             break;
                     }
                     break;
                 }
+                break;
 
             case 4:
                 break;

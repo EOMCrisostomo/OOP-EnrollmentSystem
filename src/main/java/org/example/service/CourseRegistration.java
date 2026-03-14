@@ -10,10 +10,10 @@ public class CourseRegistration {
     public void addCourse (){
         System.out.print("Enter Program: ");
         String program = scan.next();
-        System.out.print("Enter Course ID: ");
-        int ID = scan.nextInt();
         System.out.print("Enter Course Name: ");
         String name = scan.next();
+        System.out.print("Enter Course ID: ");
+        int ID = scan.nextInt();
         courseArrayList.add(new Course(ID, name, program));
 }
     public void displayAll(){
