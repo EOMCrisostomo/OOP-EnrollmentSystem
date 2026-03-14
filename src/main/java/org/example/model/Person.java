@@ -4,6 +4,8 @@ public abstract class Person {
     private int id;
     private String name;
 
+    public abstract void mainTask ();
+
     public Person (int id, String name){
         this.id = id;
         this.name = name;
@@ -26,8 +28,6 @@ public abstract class Person {
     public String getName(){
         return name;
     }
-
-    public abstract void mainTask ();
 
 
 }
